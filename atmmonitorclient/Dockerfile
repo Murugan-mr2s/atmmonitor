@@ -1,23 +1,4 @@
 
-# pull image from repository
-#FROM openjdk:17-jdk-alpine
-
-# create directory
-
-#RUN mkdir /apps
-
-# copy jar file into app directory
-#ADD target/*.jar /apps/atm-monitor-client.jar
-
-# dir change into apps
-#WORKDIR /apps
-
-#expose port
-#EXPOSE 8081
-
-# execute jar
-#CMD ["java" ,"-jar" , "atm-monitor-client.jar"]
-
 # pull the latest Alpine image as the base
 FROM alpine:latest
 
