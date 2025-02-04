@@ -21,8 +21,13 @@ public class AtmPingModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    String bank;
-    String atmid;
+
+    @ManyToOne
+    @JoinColumn(name = "atm_id")
+    ATM atm;
+    //String bank;
+    //String atmid;
+
     String status;
     LocalDateTime observed_at;
     LocalDateTime created_at;

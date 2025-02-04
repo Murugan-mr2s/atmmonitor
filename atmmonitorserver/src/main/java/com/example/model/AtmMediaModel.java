@@ -19,8 +19,13 @@ public class AtmMediaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    String bank;
-    String atmid;
+    //String bank;
+    //String atmid;
+
+    @ManyToOne
+    @JoinColumn(name = "atm_id")
+    ATM atm;
+
     String path;
     LocalDateTime observed_at;
     LocalDateTime created_at;

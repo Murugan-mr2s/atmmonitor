@@ -20,8 +20,12 @@ public class AtmServiceModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String bank;
-    private String atmid;
+
+    @ManyToOne
+    @JoinColumn(name = "atm_id")
+    ATM atm;
+    //private String bank;
+    //private String atmid;
     private String userid;
     private AtmServiceType type;
     private AtmServiceStatus status;

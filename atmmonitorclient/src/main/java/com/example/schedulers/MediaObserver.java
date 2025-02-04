@@ -54,7 +54,7 @@ public class MediaObserver {
                 .withZone(ZoneId.systemDefault())
                 .format(Instant.now());
 
-        int vid = (int) (Math.random()*4); // randomly choose 1 one video
+        int vid = (int) Math.ceil(Math.random()*4); // randomly choose 1 one video
         AtmDataInf data = new MediaModel(atmDeviceInfo.getName() ,
                 atmDeviceInfo.getId(),
                 "vsamples/v-clip"+vid +".mp4",

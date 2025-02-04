@@ -26,16 +26,16 @@ services:
     depends_on:
       - postgres
 
-  atm-monitor-client:
-    container_name: 'atm-monitor-client'
-    build:
-      context: ./atmmonitorclient
-      dockerfile: Dockerfile
-    ports:
-      - '8081:8081'
-    depends_on:
-      - postgres
-      - atm-monitor-server
+  #atm-monitor-client:
+    #container_name: 'atm-monitor-client'
+    #build:
+      #context: ./atmmonitorclient
+      #dockerfile: Dockerfile
+    #ports:
+      #- '8081:8081'
+    #depends_on:
+      #- postgres
+      #- atm-monitor-server
 
 volumes:
   postgres_data:
